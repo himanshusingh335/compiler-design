@@ -228,7 +228,7 @@ int main() {
   
   // creating an array dfa structures
   struct DFA *dfa_states = malloc(MAX_LEN * (sizeof(dfa)));
-  states = 6, symbols = 2;
+  states = 9, symbols = 2; // set number of states and symbols here
   
   printf("\n STATES OF NFA :\t\t");
   for (i = 0; i < states; i++)
@@ -246,24 +246,33 @@ int main() {
   
   // Hard coded input for NFA table
   char *DFA_TABLE[MAX_LEN][symbols];
-  strcpy(&NFA_TABLE[0][0], "FC");
+  strcpy(&NFA_TABLE[0][0], "-");
   strcpy(&NFA_TABLE[0][1], "-");
-  strcpy(&NFA_TABLE[0][2], "BF");
+  strcpy(&NFA_TABLE[0][2], "BH");
   strcpy(&NFA_TABLE[1][0], "-");
-  strcpy(&NFA_TABLE[1][1], "C");
-  strcpy(&NFA_TABLE[1][2], "-");
-  strcpy(&NFA_TABLE[2][0], "-");
+  strcpy(&NFA_TABLE[1][1], "-");
+  strcpy(&NFA_TABLE[1][2], "CE");
+  strcpy(&NFA_TABLE[2][0], "D");
   strcpy(&NFA_TABLE[2][1], "-");
-  strcpy(&NFA_TABLE[2][2], "D");
-  strcpy(&NFA_TABLE[3][0], "E");
-  strcpy(&NFA_TABLE[3][1], "A");
-  strcpy(&NFA_TABLE[3][2], "-");
-  strcpy(&NFA_TABLE[4][0], "A");
-  strcpy(&NFA_TABLE[4][1], "-");
-  strcpy(&NFA_TABLE[4][2], "BF");
+  strcpy(&NFA_TABLE[2][2], "-");
+  strcpy(&NFA_TABLE[3][0], "-");
+  strcpy(&NFA_TABLE[3][1], "-");
+  strcpy(&NFA_TABLE[3][2], "G");
+  strcpy(&NFA_TABLE[4][0], "-");
+  strcpy(&NFA_TABLE[4][1], "F");
+  strcpy(&NFA_TABLE[4][2], "-");
   strcpy(&NFA_TABLE[5][0], "-");
   strcpy(&NFA_TABLE[5][1], "-");
-  strcpy(&NFA_TABLE[5][2], "-");
+  strcpy(&NFA_TABLE[5][2], "G");
+  strcpy(&NFA_TABLE[6][0], "-");
+  strcpy(&NFA_TABLE[6][1], "-");
+  strcpy(&NFA_TABLE[6][2], "BH");
+  strcpy(&NFA_TABLE[7][0], "I");
+  strcpy(&NFA_TABLE[7][1], "-");
+  strcpy(&NFA_TABLE[7][2], "-");
+  strcpy(&NFA_TABLE[8][0], "-");
+  strcpy(&NFA_TABLE[8][1], "-");
+  strcpy(&NFA_TABLE[8][2], "-");
   printf("\n NFA STATE TRANSITION TABLE \n\n\n");
   printf("STATES\t");
   
